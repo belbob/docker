@@ -1,5 +1,6 @@
 FROM centos:centos7
 MAINTAINER belbob <robert.keersse@gmail.com>
+RUN yum clean all; yum -y update
 RUN yum -y update; yum clean all
 RUN yum -y install wget epel-release; yum clean all
 RUN cd /etc/yum.repos.d/ && wget http://download.opensuse.org/repositories/isv:ownCloud:community/CentOS_CentOS-7/isv:ownCloud:community.repo
